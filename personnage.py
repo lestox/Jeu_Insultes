@@ -5,7 +5,7 @@ class personnage:
 
     def __init__(self,choix):
     # Création des variables des personnages utilisables pour le combats
-        self.list_insult = [] # TO DO : La liste d'insultes qui sont très efficaces contre notre personnage 
+        #self.list_insult = [] # TO DO : La liste d'insultes qui sont très efficaces contre notre personnage 
         self.list_styles = ["Chauve","Roux","Nain","Vieille"]
         self.style = self.list_styles[choix]
         self.pv = 100
