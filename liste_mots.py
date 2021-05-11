@@ -18,3 +18,11 @@ class liste_mots:
         elif choix_map == 3:
             return self.mots_map +=[bureau, ordinateur, boss] # Les mots de la map : Bureau
         # etc ...
+
+    def mots_basiques(self):
+        sujet = ["Je", "Tu", "Ils", "Toi", "Vous", "Les gens commme toi"]
+        verbe = ["mange", "bois", "me fait", "es", "pense"]
+        adverbe = ["vraiment", "trop", "pas du tout", "sérieusement", "gravement"]
+        complement_1 = ["pas beau", "limite", "atteint de"]
+
+    def mots_perso(self, )
