@@ -1,7 +1,7 @@
 from menu import menu
 from personnage import personnage
 import random
-
+import map
 class liste_mots:
 
     def __init__(self, mots_map, mots_basiques, mots_perso, mots_utilisables):
@@ -23,7 +23,7 @@ class liste_mots:
         # etc ...
 
     def mots_basiques(self, mots_basiques):
-        self.mots_basiques = []
+        self.mots_basiques = mots_basiques
         sujet = ["Je", "Tu", "Ils", "Toi", "Vous", "Les gens commme toi"] # à compléter
         verbe = ["mange", "bois", "me fait", "es", "pense"] # à compléter
         adverbe = ["vraiment", "trop", "pas du tout", "sérieusement", "gravement"] #à compléter
@@ -42,5 +42,4 @@ class liste_mots:
             return mots_perso = random.choice(["petit", "minus", "gnome"])*2 #à compléter
         elif style_perso == 3 :
             return mots_perso = random.choice(["vieille peau", "mamie", "le vioque"])*2 #à compléter
-
 liste_mots()
