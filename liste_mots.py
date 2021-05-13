@@ -1,45 +1,41 @@
 from menu import menu
 from personnage import personnage
 import random
-import map
-class liste_mots:
+from map import map
 
-    def __init__(self, mots_map, mots_basiques, mots_perso, mots_utilisables):
-    # Création et Concaténation des mots de base + des mots liés à la map (+ possiblement des mots liés aux personnages)
-        mots_map()
-        mots_basiques()
-        mots_perso()
-        print(self.mots_utilisables = [mots_map + mots_basiques + mots_perso])
-    
-    def mots_map(self, choix_map, mots_map):
-        self.choix_map = menu().choose_map().choix = choix_map
-        self.mots_map = mots_map
+l = []
+def liste() :
+    global l
+    liste_finale = [mots_map(l) + mots_basiques(l) + mots_perso(l)]
+    print(liste_finale)
+
+def mots_map(x):
+        choix_map = menu().choose_map().choix
         if choix_map == 1:
-            return mots_map = random.choice([wagon, train, billet])*2 # Les mots de la map : Train
+            return x + random.choices(["wagon", "train", "billet"], k=2) # Les mots de la map : Train
         elif choix_map == 2:
-            return mots_map = random.choice([soleil, sable, mer])*2 # Les mots de la map : Plage
+            return x + random.choices(["soleil", "sable", "mer"], k=2) # Les mots de la map : Plage
         elif choix_map == 3:
-            return mots_map = random.choice([bureau, ordinateur, boss])*2 # Les mots de la map : Bureau
+            return x + random.choices(["bureau", "ordinateur", "boss"], k=2) # Les mots de la map : Bureau
         # etc ...
 
-    def mots_basiques(self, mots_basiques):
-        self.mots_basiques = mots_basiques
+def mots_basiques(x):
         sujet = ["Je", "Tu", "Ils", "Toi", "Vous", "Les gens commme toi"] # à compléter
         verbe = ["mange", "bois", "me fait", "es", "pense"] # à compléter
         adverbe = ["vraiment", "trop", "pas du tout", "sérieusement", "gravement"] #à compléter
         complement_1 = ["pas beau", "limite", "atteint de"] # à compléter
-        mots_basiques = [random.choice(sujet)*2 += random.choice(verbe)*2 += random.choice(adverbe)*2 += random.choice(complement_1)*2]
-        return mots_basiques
+        return x + [random.choices(sujet, k=2) += random.choices(verbe, k=2) += random.choices(adverbe, k=2) += random.choices(complement_1, k=2)]
 
-    def mots_perso(self, style_perso, mots_perso)
-        self.mots_perso = mots_perso
+def mots_perso(x)
         style_perso = personnage().style
         if style_perso == 0 :
-            return mots_perso = random.choice(["chauve", "calv", "calcivie"])*2 #à compléter
+            return x + random.choices(["chauve", "calv", "calcivie"], k=2) #à compléter
         elif style_perso == 1 :
-            return mots_perso = random.choice(["roux", "rouquin", "poil de carotte"])*2 #à compléter
+            return x + random.choices(["roux", "rouquin", "poil de carotte"], k=2) #à compléter
         elif style_perso == 2 :
-            return mots_perso = random.choice(["petit", "minus", "gnome"])*2 #à compléter
+            return x  random.choices(["petit", "minus", "gnome"], k=2) #à compléter
         elif style_perso == 3 :
-            return mots_perso = random.choice(["vieille peau", "mamie", "le vioque"])*2 #à compléter
-liste_mots()
+            return x + random.choices(["vieille peau", "mamie", "le vioque"], k=2) #à compléter
+
+print("coucou")
+liste()
