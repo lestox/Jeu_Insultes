@@ -1,9 +1,0 @@
-import random
-def bla():
-    #tr = ["blaz", "cevo", "bjvbeof", "vjbjr"]
-    print(random.choices(["blaz", "cevo", "bjvbeof", "vjbjr"], k=2))
-
-def truc():
-    print("truc")
-
-truc()
