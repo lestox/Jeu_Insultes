@@ -1,7 +1,7 @@
 import random
-#from personnage import personnage
-#from menu import menu
-#from map import *
+from personnage import *
+from menu import *
+from map import *
 
 
 l = []
@@ -12,8 +12,7 @@ def liste():
     return liste_finale
 
 def mots_map(x):
-        #choix_map = menu().choose_map().choix
-        choix_map = 1
+        choix_map = menu().choose_map().choix
         if choix_map == 1:
             x = x + random.choices(["wagon", "train", "billet"], k=2) # Les mots de la map : Train
             return x
@@ -34,8 +33,7 @@ def mots_basiques(x):
         return x
 
 def mots_perso(x):
-        #style_perso = personnage().style
-        style_perso = 1
+        style_perso = personnage().style
         if style_perso == 0 :
             x = x + random.choices(["chauve", "calv", "calcivie"], k=2) #à compléter
             return x
@@ -48,5 +46,3 @@ def mots_perso(x):
         elif style_perso == 3 :
             x = x + random.choices(["vieille peau", "mamie", "le vioque"], k=2) #à compléter
             return x
-
-liste()
