@@ -4,4 +4,3 @@ from liste_mots import *
 # Sert juste à lancer notre jeu
 
 game()
-liste()

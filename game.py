@@ -26,6 +26,7 @@ class game:
         self.select_perso1()
         self.select_perso2()
         self.select_map()
+
         
     def select_mode(self):
         print("Choisissez le mode de jeu :")
