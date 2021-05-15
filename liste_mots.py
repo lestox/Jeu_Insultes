@@ -11,7 +11,7 @@ class liste_mots:
         self.list_sujet = ["Je", "Tu", "Ils", "Toi", "Vous", "Les gens commme toi"] # à remplacer par, exemple : [mot("Je","sujet"),mot("Tu","sujet")]
         self.list_verbe = ["manges", "bois", "me fais", "es", "penses"]
         self.list_adverbe = ["vraiment", "trop", "pas du tout", "sérieusement", "gravement"]
-        self.list_adjectif = ["pas beau", "moche", "minable"]
+        self.list_adjectif = ["pas beau", "moche", "minable","puant","éclaté au sol"]
         self.list_finish = ["prends ça !", "j'en ai finis avec toi !", "allez, pleure pas !"]
         self.maListe = []
 
