@@ -1,3 +1,6 @@
+import random 
+import time
+
 class menu:
     def __str__(self):
     # Message de bienvenu
@@ -22,12 +25,21 @@ class menu:
             print(mode)
     
     # La fonction qui choisit le perso
-    def choose_perso(self):
-        self.print_perso()
-        print("Choix du perso :")
-        choix = int(input()) - 1
-        print("---------- "+self.list_perso[choix], ": sélectionné "+"---------- ")
-        return choix
+    def choose_perso(self,choix_mode):
+        if choix_mode == 0:
+            self.print_perso()
+            print("Choix du perso :")
+            choix = int(input()) - 1
+            print("---------- "+self.list_perso[choix], ": sélectionné "+"---------- ")
+            return choix
+        elif choix_mode == 1: 
+            time.sleep(1)
+            self.print_perso()
+            print("Choix du perso de l'IA :")
+            time.sleep(3)
+            choix = random.randint(1,len(self.list_perso)) - 1
+            print("---------- "+self.list_perso[choix], ": sélectionné "+"---------- ")
+            return choix
     def print_perso(self):
         for perso in self.list_perso:
             print(perso)

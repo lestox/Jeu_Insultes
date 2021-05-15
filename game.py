@@ -37,10 +37,10 @@ class game:
         self.choix_mode = menu().choose_mode()
     def select_perso1(self):
         print("Le joueur 1 choisit son personnage :")
-        self.choix_perso1 = menu().choose_perso()
+        self.choix_perso1 = menu().choose_perso(0)
     def select_perso2(self):
         print("Le joueur 2 choisit son personnage :")
-        self.choix_perso2 = menu().choose_perso()
+        self.choix_perso2 = menu().choose_perso(self.choix_mode)
     def select_map(self):
         print("Choisissez le lieu du CLASH :")
         self.choix_map = menu().choose_map()
