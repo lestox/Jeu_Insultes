@@ -9,9 +9,10 @@ class liste_mots:
         self.choix_perso1 = choix_perso1
         self.choix_perso2 = choix_perso2
         self.list_sujet = ["Je", "Tu", "Ils", "Toi", "Vous", "Les gens commme toi"] # à remplacer par, exemple : [mot("Je","sujet"),mot("Tu","sujet")]
-        self.list_verbe = ["mange", "bois", "me fait", "es", "pense"]
+        self.list_verbe = ["manges", "bois", "me fais", "es", "penses"]
         self.list_adverbe = ["vraiment", "trop", "pas du tout", "sérieusement", "gravement"]
-        self.list_complement = ["pas beau", "limite", "atteint de"]
+        self.list_adjectif = ["pas beau", "moche", "minable"]
+        self.list_finish = ["prends ça !", "j'en ai finis avec toi !", "allez, pleure pas !"]
         self.maListe = []
 
     def prepare_list(self):
@@ -21,18 +22,18 @@ class liste_mots:
 
     def mots_map(self,choix_map):
         if self.choix_map == 0:
-            x = random.choices(["wagon", "train", "billet"], k=2) # Les mots de la map : Train
+            x = random.choices(["à l'intérieur du wagon", "dans ce train", "avec ton billet"], k=2) # Les mots de la map : Train
             return x
         elif self.choix_map == 1:
-            x = random.choices(["soleil", "sable", "mer"], k=2) # Les mots de la map : Plage
+            x = random.choices(["au soleil", "sur le sable", "dans la mer"], k=2) # Les mots de la map : Plage
             return x
         elif self.choix_map == 2:
-            x = random.choices(["bureau", "ordinateur", "boss"], k=2) # Les mots de la map : Bureau
+            x = random.choices(["dans le bureau", "sur ton ordinateur", "devant le boss"], k=2) # Les mots de la map : Bureau
             return x
         # etc...
 
     def mots_basiques(self):
-        x = (random.choices(self.list_sujet, k=2) + random.choices(self.list_verbe, k=2) + random.choices(self.list_adverbe, k=2) + random.choices(self.list_complement, k=2))
+        x = (random.choices(self.list_sujet, k=2) + random.choices(self.list_verbe, k=2) + random.choices(self.list_adverbe, k=2) + random.choices(self.list_adjectif, k=2)) + random.choices(self.list_finish, k=2) 
         return x
 
     def mots_perso(self,choix_perso):
