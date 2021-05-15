@@ -8,7 +8,7 @@ class liste_mots:
         self.choix_map = choix_map
         self.choix_perso1 = choix_perso1
         self.choix_perso2 = choix_perso2
-        self.list_sujet = ["Je", "Tu", "Ils", "Toi", "Vous", "Les gens commme toi"]
+        self.list_sujet = ["Je", "Tu", "Ils", "Toi", "Vous", "Les gens commme toi"] # à remplacer par, exemple : [mot("Je","sujet"),mot("Tu","sujet")]
         self.list_verbe = ["mange", "bois", "me fait", "es", "pense"]
         self.list_adverbe = ["vraiment", "trop", "pas du tout", "sérieusement", "gravement"]
         self.list_complement = ["pas beau", "limite", "atteint de"]
