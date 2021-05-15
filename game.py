@@ -1,4 +1,4 @@
-from random import *
+import random
 from personnage import personnage
 from menu import menu
 from map import map
@@ -48,6 +48,7 @@ class game:
 
     def game_list(self):
         self.maList = liste_mots(self.choix_map,self.choix_perso1,self.choix_perso2).prepare_list()
+        random.shuffle(self.maList)
     
 
 
