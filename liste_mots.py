@@ -1,4 +1,5 @@
 import random
+from mots import mots
 
 class liste_mots:
     def __str__(self):
