@@ -32,7 +32,7 @@ class menu:
             choix = int(input()) - 1
             print("---------- "+self.list_perso[choix], ": sélectionné "+"---------- ")
             return choix
-        elif choix_mode == 1: 
+        elif choix_mode == 1 or 2: 
             time.sleep(1)
             self.print_perso()
             print("Choix du perso de l'IA :")
