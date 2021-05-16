@@ -39,7 +39,7 @@ class liste_mots:
 
     def mots_perso(self,choix_perso):
         if choix_perso == 0 :
-            x = random.choices(["chauve", "calv", "calcivie"], k=2) #à compléter
+            x = random.choices(["chauve", "crane d'oeuf", "calvitie"], k=2) #à compléter
             return x
         elif choix_perso == 1 :
             x = random.choices(["roux", "rouquin", "poil de carotte"], k=2) #à compléter
