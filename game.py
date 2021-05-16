@@ -18,10 +18,8 @@ class game:
         print("\n\n")
     # 4) Je crée et récupère la variable de ma liste de jeu
         self.game_list() 
-        print(self.maList)
     # 5) Je lance le combat
-        # self.Combat()
-
+        self.Combat(self.map,self.perso1,self.perso2,self.maList)
 
     def launch_menu(self):
     # 2) Je sélectionne les différents paramètres de ma partie
@@ -59,4 +57,12 @@ class game:
         # 
         # 
         # 
+    def Combat(self,map,perso1,perso2,maList):
+        print(maList)
+        print("1/Ajouter des mots 2/Envoyer la phrase")
+        choix = int(input())
+        if choix == 1:
+            print("fonction Ajout_mots")
+        elif choix == 2:
+            print("fonction envoyer_phrase")
         
