@@ -63,6 +63,10 @@ class game:
         choix = int(input())
         if choix == 1:
             print("fonction Ajout_mots")
+            self.perso1.Ajout_mots(maList)
         elif choix == 2:
-            print("fonction envoyer_phrase")
+            self.Envoyer_phrase(perso1)
+
+    def Envoyer_phrase(self,perso):
+        print("Ma fonction Envoyer_phrase")
         

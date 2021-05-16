@@ -5,7 +5,7 @@ class personnage:
 
     def __init__(self,choix):
     # Création des variables des personnages utilisables pour le combats
-        #self.list_insult = [] # TO DO : La liste d'insultes qui sont très efficaces contre notre personnage 
+        self.phrase_insulte = [] # TO DO : La phrase d'insulte que charge notre personnage
         self.list_styles = ["Chauve","Roux","Nain","Vieille"]
         self.style = self.list_styles[choix]
         self.pv = 100
@@ -14,3 +14,6 @@ class personnage:
     def damage(self,dmg):
         dmg = dmg - self.Def 
         self.pv -= dmg
+
+    def Ajout_mots(self,maList):
+        print("ajout mot dans class personnage")
