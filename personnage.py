@@ -14,12 +14,10 @@ class personnage:
 
     # Fonction pour prendre des dégats lorsque une attaque touche le personnage
     def damage(self,dmg):
-        dmg = dmg - self.Def 
         self.pv -= dmg
 
     def Ajout_mots(self,maList,choix_mode):
         if choix_mode == 0: # Joueur 1, ET Joueur 2 si humain
-            print(maList)
             print("\nChoisissez vos mots (Exemple : pour selectionner la 1ere proposition // Tapez 1):\n")
             choix = int(input()) - 1
             if choix >= 0 and choix < len(maList):
@@ -31,8 +29,6 @@ class personnage:
                 self.Ajout_mots(maList)
 
         elif choix_mode == 1 or 2: # Joueur 2 si IA
-            time.sleep(1)
-            print(maList)
             time.sleep(1)
             print("\nSelection du mot de l'IA :\n")
             time.sleep(3)

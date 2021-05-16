@@ -57,13 +57,18 @@ class game:
 
 
     def Combat(self,map,perso1,perso2,maList):
-        # Joueur 1
-        print("\nTour du joueur 1\n")
-        self.PlayerTurn(perso1,maList,0)
-        print("\nTour du joueur 2\n")
-        self.PlayerTurn(perso2,maList,self.choix_mode)
-        print("\n La phrase du perso1",perso1.phrase_insulte)
-        print("\n La phrase du perso2",perso2.phrase_insulte,"\n")
+        # Tant qu'un des joueurs n'est pas mort
+        while perso1.pv > 0 and perso2.pv > 0:
+            # Tour du Joueur 1
+            print("\n ---------- Tour du joueur 1 ---------- \n")
+            self.PlayerTurn(perso1,maList,0)
+            # Tour du Joueur 2
+            print("\n ---------- Tour du joueur 2 ---------- \n")
+            self.PlayerTurn(perso2,maList,self.choix_mode)
+            print("\n La phrase du perso1 :"),self.Print_phrase(perso1.phrase_insulte)
+            print("\n La phrase du perso2 :"),self.Print_phrase(perso2.phrase_insulte)
+            perso1.damage(20)
+        
         
 
 
@@ -72,6 +77,7 @@ class game:
             print("1/Ajouter des mots 2/Envoyer la phrase")
             choix = int(input())
             if choix == 1:
+                self.Print_mots(maList)
                 self.choix_insulte = perso.Ajout_mots(maList,0)
                 self.maList.pop(self.choix_insulte) # Ma nouvelle liste avec le mot sélectionné en moins
 
@@ -84,13 +90,26 @@ class game:
             time.sleep(3)
             choix = random.randint(1,2)
             if choix == 1:
+                self.Print_mots(maList)
                 self.choix_insulte = perso.Ajout_mots(maList,choix_mode)
                 self.maList.pop(self.choix_insulte)
             elif choix == 2:
                 self.Envoyer_phrase(perso)
             
 
-
     def Envoyer_phrase(self,perso):
         print("Ma fonction Envoyer_phrase")
+
+
+    def Print_mots(self,liste):
+        print("")
+        for Mots in liste:
+            print(Mots.text)
+        print("")
+
+    def Print_phrase(self,liste):
+        print("")
+        for Mots in liste:
+            print(Mots.text, end=" ")
+        print("")
         
