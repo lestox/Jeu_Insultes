@@ -7,6 +7,8 @@ from liste_mots import liste_mots
 
 class game:
     def __init__(self):
+        print("\n")
+        self.accueil()
     # 1) Je lance le menu
         self.launch_menu()
     # 3) Grâce aux paramètres choisis, je crée mes objets de class pour jouer
@@ -22,6 +24,7 @@ class game:
     # 5) Je lance le combat
         self.Combat(self.map,self.perso1,self.perso2,self.maList)
 
+
     def launch_menu(self):
     # 2) Je sélectionne les différents paramètres de ma partie
         print(menu())
@@ -34,6 +37,9 @@ class game:
     def select_mode(self):
         print("Choisissez le mode de jeu :\n")
         self.choix_mode = menu().choose_mode()
+        if self.choix_mode == 2:
+            self.demo()
+            game()
     def select_perso1(self):
         print("Le joueur 1 choisit son personnage :\n")
         self.choix_perso1 = menu().choose_perso(0)
@@ -216,3 +222,55 @@ class game:
         for Mots in liste:
             print(Mots.text, end=" ")
         print("")
+
+
+    def accueil(self):  
+        time.sleep(2)                                                                            
+        print("             ##########")                                                     
+        print("            #####(((((((((#### ")                                               
+        print("            #####(((((((((((((((###.")                                             
+        print("        ######(((((((////(((((((##")                                           
+        print("        #########((((((////(((((((#/             ,############")                
+        print("        ############((((((((((((((##          ####((((((((((#####")              
+        print("        ###############((((((((########.   ###(((((((((((((((######")            
+        print("        ##########################%##(###  ##((((((/////((((((#######")           
+        print("    ,##################(####%###((###, ##(((((((///((((((##########")          
+        print("    ################################    ##(((((((((((((#############")         
+        print("    ##(###########################.  ########(((((((#################")        
+        print("    #(((########################    (##((############################,")       
+        print("    %%#(((###################         ####((#######(##(################")       
+        print("    .%,#%##(##############(             #############(((################(")      
+        print("    %,  .,###%#########                   ############################(##")      
+        print("    ##.       ..,(###%/                       #######################(((##")      
+        print("    .(%/.       .###%                             ##################(((#%%%")     
+        print("    . %%#,    .###%                                 ###############%##..#%")    
+        print("        . ,#####%%                                      ######%###/.    .#%")   
+        print("                                                        ####/.         .#%")   
+        print("                                                            ####.      .###")     
+        print("                                                            ####. .(#%*")        
+        print("                                                            ##.   ###")
+        time.sleep(3)
+
+    
+    def demo(self):
+        print("Voici un petit tutoriel pour t'expliquer comment jouer.\n")
+        time.sleep(3)
+        print("Choisis ton mode de jeu en tapant le chiffre correspondant à ce que tu veux choisir, cela sera comme ça tout le long du jeu.")
+        time.sleep(3)
+        print("Tu devras ensuite choisir ton pesonnage, chaque personnages est caractéristique et possède ses propres faiblesses.\n")
+        time.sleep(3)
+        print("Tu devras ensuite choisir le lieu où aura lieu le clash.")
+        time.sleep(2)
+        print("Esuite, le jeu commence ! Le but du jeu va être de battre son adversaire à coup d'insultes.\n")
+        time.sleep(2)
+        print("Pour ce faire, une liste de mots commune aux 2 joueurs sera proposée, les joueurs devront choisir des mots chacun à leur tour pour formuler leur phrase d'insulte\n")
+        time.sleep(3)
+        print("Ton clash est plus puissant si tu fais des phrases cohérentes, si tu touches aux points sensibles de ton adversaire ou si tu utilises des mots en rapport avec la map que tu as choisi.\n")
+        time.sleep(3)
+        print("A chaque début de tour il t'est proposé d'ajouter des mots ou d'envoyer ta phrase, ainsi lorsque tu juges que ton insulte est finie, tu peux l'envoyer en choisissant envoyer l'insulte.\n")
+        time.sleep(4)
+        print("Ainsi, à tout moment toi ou ton adversaire peut décider de finir sa phrase\n")
+        time.sleep(2)
+        print("Le premier qui n'a plus de points de vie perd la partie")
+        time.sleep(2)
+        print("Bon jeu !")
