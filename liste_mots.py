@@ -52,7 +52,7 @@ class liste_mots:
         self.Mots40 = mots("deforme","Verbe")
         self.Mots41 = mots("est","Verbe")
         self.Mots42 = mots("survie","Verbe")
-        #self.Mots43 = mots("","Verbe")
+        self.Mots43 = mots("est","Verbe")
         #self.Mots44 = mots("","Verbe")
         #self.Mots45 = mots("","Verbe")
         #self.Mots46 = mots("","Verbe")
@@ -207,12 +207,60 @@ class liste_mots:
         self.Mots223 = mots("en solde","Magasin")
         self.Mots224 = mots("dans les rayons","Magasin")
         self.Mots225 = mots("à la caisse","Magasin")
+
+        self.Mots226 = mots("crâne d\'oeuf !","Chauve") 
+        self.Mots227 = mots("petite boule de billard","Chauve") 
+        self.Mots228 = mots("sale chauve","Chauve") 
+        self.Mots229 = mots("avec ta calvitie","Chauve") 
+        self.Mots230 = mots("avec ton crâne luisant","Chauve") 
+        self.Mots231 = mots("avec ta boule de cristal","Chauve") 
+        self.Mots232 = mots("avec ton caillou","Chauve") 
+        #self.Mots233 = mots("","Chauve") 
+        #self.Mots234 = mots("","Chauve") 
+        #self.Mots235 = mots("","Chauve")   
+        #self.Mots236 = mots("","Chauve") 
+
+        self.Mots237 = mots("rouquin","Roux")
+        self.Mots238 = mots("poil de carotte","Roux")
+        self.Mots239 = mots("roux","Roux")
+        self.Mots240 = mots("avec tes tâches de rousseur","Roux")
+        self.Mots241 = mots("sale rouquemoute","Roux")
+        #self.Mots242 = mots("","Roux")
+        #self.Mots243 = mots("","Roux")
+        #self.Mots244 = mots("","Roux")
+        #self.Mots245 = mots("","Roux")
+        #self.Mots246 = mots("","Roux")
+        #self.Mots247 = mots("","Roux")
+
+        self.Mots248 = mots("mon petit pote","Nain")
+        self.Mots249 = mots("petit","Nain")
+        self.Mots250 = mots("minus !","Nain")
+        self.Mots251 = mots("gnome","Nain")
+        self.Mots252 = mots("et tu rentres dans ma poche","Nain")
+        self.Mots253 = mots("minuscule","Nain")
+        self.Mots254 = mots("petit microbe","Nain")
+        #self.Mots255 = mots("","Nain")
+        #self.Mots256 = mots("","Nain")
+        #self.Mots257 = mots("","Nain")
+        #self.Mots258 = mots("","Nain")
+
+        self.Mots259 = mots("vieille peau","Vieille")
+        self.Mots260 = mots("la vioque","Vieille")
+        self.Mots261 = mots("la centenaire","Vieille")
+        self.Mots262 = mots("ok mamie","Vieille")
+        self.Mots263 = mots("et n'oublie pas ta canne !","Vieille")
+        #self.Mots264 = mots("","Vieille")
+        #self.Mots265 = mots("","Vieille")
+        #self.Mots266 = mots("","Vieille")
+        #self.Mots267 = mots("","Vieille")
+        #self.Mots268 = mots("","Vieille")
+        #self.Mots269 = mots("","Vieille")
     # mes autres variables
         self.choix_map = choix_map
         self.choix_perso1 = choix_perso1
         self.choix_perso2 = choix_perso2
         self.list_sujet = [self.Mots1,self.Mots2,self.Mots3,self.Mots4,self.Mots5,self.Mots6,self.Mots7,self.Mots8,self.Mots9,self.Mots10,self.Mots11,self.Mots13,self.Mots14,self.Mots15,self.Mots16,self.Mots17,self.Mots18,self.Mots19,self.Mots20,self.Mots21]
-        self.list_verbe = [self.Mots39,self.Mots40,self.Mots41,self.Mots42]
+        self.list_verbe = [self.Mots39,self.Mots40,self.Mots41,self.Mots42,self.Mots43]
         self.list_adverbe = [self.Mots72,self.Mots73,self.Mots74,self.Mots75,self.Mots76,self.Mots77,self.Mots78,self.Mots79,self.Mots80,self.Mots81,self.Mots82,self.Mots83,self.Mots84,self.Mots85,self.Mots86,self.Mots87,self.Mots88,self.Mots89,self.Mots90,self.Mots91,self.Mots92,self.Mots93,self.Mots94,self.Mots95]
         self.list_adjectif = [self.Mots113,self.Mots114,self.Mots115,self.Mots116,self.Mots117,self.Mots118,self.Mots119,self.Mots120,self.Mots121,self.Mots122,self.Mots123,self.Mots124,self.Mots125,self.Mots126,self.Mots127,self.Mots128,self.Mots129,self.Mots130,self.Mots131,self.Mots132,self.Mots133,self.Mots134,self.Mots135,self.Mots136,self.Mots137,self.Mots138,self.Mots139,self.Mots140]
         self.list_finish = [self.Mots154,self.Mots155,self.Mots156,self.Mots157,self.Mots158,self.Mots159,self.Mots160,self.Mots161,self.Mots162,self.Mots163,self.Mots164,self.Mots165]
@@ -225,36 +273,36 @@ class liste_mots:
 
     def mots_map(self,choix_map):
         if self.choix_map == 0:
-            x = random.choices([self.Mots175,self.Mots176,self.Mots177,self.Mots178,self.Mots179,self.Mots180,self.Mots181], k=2) # Les mots de la map : Train
+            x = random.choices([self.Mots175,self.Mots176,self.Mots177,self.Mots178,self.Mots179,self.Mots180,self.Mots181], k=3) # Les mots de la map : Train
             return x
         elif self.choix_map == 1:
-            x = random.choices([self.Mots186,self.Mots187,self.Mots188,self.Mots189,self.Mots190,self.Mots191,self.Mots192], k=2) # Les mots de la map : Plage
+            x = random.choices([self.Mots186,self.Mots187,self.Mots188,self.Mots189,self.Mots190,self.Mots191,self.Mots192], k=3) # Les mots de la map : Plage
             return x
         elif self.choix_map == 2:
-            x = random.choices([self.Mots197,self.Mots198,self.Mots199,self.Mots200,self.Mots201,self.Mots202,self.Mots203,self.Mots204], k=2) # Les mots de la map : Bureau
+            x = random.choices([self.Mots197,self.Mots198,self.Mots199,self.Mots200,self.Mots201,self.Mots202,self.Mots203,self.Mots204], k=3) # Les mots de la map : Bureau
             return x
         elif self.choix_map == 3:
-            x = random.choices([self.Mots208,self.Mots209,self.Mots210,self.Mots211,self.Mots212,self.Mots213,self.Mots214,self.Mots215], k=2) # Les mots de la map : Piscine
+            x = random.choices([self.Mots208,self.Mots209,self.Mots210,self.Mots211,self.Mots212,self.Mots213,self.Mots214,self.Mots215], k=3) # Les mots de la map : Piscine
             return x
         elif self.choix_map == 4:
-            x = random.choices([self.Mots219,self.Mots220,self.Mots221,self.Mots222,self.Mots223,self.Mots224,self.Mots225], k=2) # Les mots de la map : Magasin
+            x = random.choices([self.Mots219,self.Mots220,self.Mots221,self.Mots222,self.Mots223,self.Mots224,self.Mots225], k=3) # Les mots de la map : Magasin
             return x
 
     def mots_basiques(self):
-        x = (random.choices(self.list_sujet, k=2) + random.choices(self.list_verbe, k=2) + random.choices(self.list_adverbe, k=2) + random.choices(self.list_adjectif, k=2)) + random.choices(self.list_finish, k=2) 
+        x = (random.choices(self.list_sujet, k=4) + random.choices(self.list_verbe, k=4) + random.choices(self.list_adverbe, k=3) + random.choices(self.list_adjectif, k=3)) + random.choices(self.list_finish, k=3) 
         return x
 
     def mots_perso(self,choix_perso):
         if choix_perso == 0 :
-            x = random.choices([self.Mots34,self.Mots35,self.Mots36], k=2) # Les mots forts contre le style : Chauve
+            x = random.choices([self.Mots226,self.Mots227,self.Mots228,self.Mots229,self.Mots230,self.Mots231,self.Mots232], k=2) # Les mots forts contre le style : Chauve
             return x
         elif choix_perso == 1 :
-            x = random.choices([self.Mots37,self.Mots38,self.Mots39], k=2) # Les mots forts contre le style : Roux
+            x = random.choices([self.Mots237,self.Mots238,self.Mots239,self.Mots240,self.Mots241], k=2) # Les mots forts contre le style : Roux
             return x
         elif choix_perso == 2 :
-            x = random.choices([self.Mots40,self.Mots41,self.Mots42], k=2) # Les mots forts contre le style : Nain
+            x = random.choices([self.Mots248,self.Mots249,self.Mots250,self.Mots251,self.Mots252,self.Mots253,self.Mots254], k=2) # Les mots forts contre le style : Nain
             return x
         elif choix_perso == 3 :
-            x = random.choices([self.Mots43,self.Mots44,self.Mots45], k=2) # Les mots forts contre le style : Vieille
+            x = random.choices([self.Mots259,self.Mots260,self.Mots261,self.Mots262,self.Mots263], k=2) # Les mots forts contre le style : Vieille
             return x
 
