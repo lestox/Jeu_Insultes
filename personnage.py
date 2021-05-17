@@ -1,5 +1,6 @@
 import time
 import random
+
 class personnage:
     def __str__(self):
     # Le print du style du personnage (ex : C'est un Chauve)
@@ -26,7 +27,8 @@ class personnage:
                 return choix
             else:
                 print("Erreur, vous n'avez pas sélectionner un mot de la liste // Rappel : Tappez 1, 2, 3, etc...\n")
-                self.Ajout_mots(maList)
+                choix = self.Ajout_mots(maList,choix_mode)
+                return choix
 
         elif choix_mode == 1 or 2: # Joueur 2 si IA
             time.sleep(1)
