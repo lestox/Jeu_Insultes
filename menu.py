@@ -35,7 +35,7 @@ class menu:
         elif choix_mode == 1 or 2: 
             time.sleep(1)
             self.print_perso()
-            print("\nChoix du perso de l'IA :\n")
+            print("\nL'IA choisit son perso :\n")
             time.sleep(3)
             choix = random.randint(1,len(self.list_perso)) - 1
             print("\n---------- "+self.list_perso[choix], ": sélectionné "+"---------- \n")

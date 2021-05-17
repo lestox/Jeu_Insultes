@@ -20,7 +20,8 @@ class personnage:
     def Ajout_mots(self,maList,choix_mode):
         if choix_mode == 0: # Joueur 1, ET Joueur 2 si humain
             print(maList)
-            print("\nChoisissez vos mots (Exemple : pour selectionner la 1ere proposition // Tapez 1):\n")
+            print("\nChoisissez vos mots")
+            print("Exemple : pour selectionner la 1ere proposition // Tapez 1\n")
             choix = int(input()) - 1
             if choix >= 0 and choix < len(maList):
                 mots = maList[choix]
@@ -34,7 +35,7 @@ class personnage:
             time.sleep(1)
             print(maList)
             time.sleep(1)
-            print("\nSelection du mot de l'IA :\n")
+            print("\n L'IA choisit son mot\n")
             time.sleep(3)
             choix = random.randint(1,len(maList)) - 1
             mots = maList[choix]

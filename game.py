@@ -58,9 +58,9 @@ class game:
 
     def Combat(self,map,perso1,perso2,maList):
         # Joueur 1
-        print("\nTour du joueur 1\n")
+        print("\nAu tour du joueur 1\n")
         self.PlayerTurn(perso1,maList,0)
-        print("\nTour du joueur 2\n")
+        print("\nAu tour du joueur 2\n")
         self.PlayerTurn(perso2,maList,self.choix_mode)
         print("\n La phrase du perso1",perso1.phrase_insulte)
         print("\n La phrase du perso2",perso2.phrase_insulte,"\n")
@@ -69,7 +69,8 @@ class game:
 
     def PlayerTurn(self,perso,maList,choix_mode):
         if choix_mode == 0: # tour du joueur 1 / Et du joueur 2 si le mode est [J vs J]
-            print("1/Ajouter des mots 2/Envoyer la phrase")
+            print("1/Ajouter des mots")
+            print("2/Envoyer la phrase")
             choix = int(input())
             if choix == 1:
                 self.choix_insulte = perso.Ajout_mots(maList,0)
@@ -80,7 +81,7 @@ class game:
 
         elif choix_mode == 1 or 2: # tour du joueur 2 si le mode est [J vs IA] ou [Démo]
             time.sleep(1)
-            print("\nSelection de l'IA (1/Ajouter des mots 2/Envoyer la phrase):\n")
+            print("\n Au tour de l'IA de choisir (1/Ajouter des mots 2/Envoyer la phrase):\n")
             time.sleep(3)
             choix = random.randint(1,2)
             if choix == 1:
