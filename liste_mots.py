@@ -6,8 +6,9 @@ class liste_mots:
         return "Je suis la class liste_mots"
 
     def __init__(self,choix_map,choix_perso1,choix_perso2):
+    
     # La totalité de mes variables 
-        #Repartion de base prévu :
+        # Répartion de base prévu :
             # 30 sujet
             # 40 verbe
             # 40 adv
@@ -18,6 +19,9 @@ class liste_mots:
             # 10 map3
             # 10 map4
             # 10 map5
+        # Il est possible que la répartition ait changé en fonction du nombre de mots trouvés (+ ou -), des ecarts ont donc été laissé c'est pour ça que par endroit comme ligne 44 on passe de self.Mots21 à self.Mots31 ligne 46 : cela est fait en sorte à ce qu'on garde la marge initial prévu si on souhaite rajouter des mots.
+
+        # Tout les sujets
         self.Mots1 = mots("Ton appartement","Sujet")
         self.Mots2 = mots("Ton chien","Sujet")
         self.Mots3 = mots("Tu","Sujet")
@@ -40,6 +44,7 @@ class liste_mots:
         self.Mots20 = mots("Tes vêtements","Sujet")
         self.Mots21 = mots("Tes oreilles","Sujet")
 
+        # Tout les verbes
         self.Mots31 = mots("ressemble","Verbe")
         self.Mots32 = mots("a","Verbe")
         self.Mots33 = mots("es","Verbe")
@@ -82,6 +87,7 @@ class liste_mots:
         #self.Mots70 = mots("","Verbe")
         #self.Mots71 = mots("","Verbe")
 
+        # Tout les adverbes
         self.Mots72 = mots("vraiment","Adverbe")
         self.Mots73 = mots("un peu","Adverbe")
         self.Mots74 = mots("enormement","Adverbe")
@@ -124,6 +130,7 @@ class liste_mots:
         #self.Mots111 = mots("","Adverbe")
         #self.Mots112 = mots("","Adverbe")
 
+        # Tout les adjectifs
         self.Mots113 = mots("absurde","Adjectif")
         self.Mots114 = mots("ridicule","Adjectif")
         self.Mots115 = mots("malaisant","Adjectif")
@@ -153,6 +160,7 @@ class liste_mots:
         self.Mots139 = mots("beauté","Adjectif")
         self.Mots140 = mots("credible","Adjectif")
 
+        # Tout les "Finish" : expression pour finir sa phrase de manière originale/"clash"
         self.Mots154 = mots("j'en ai finis avec toi !","Finish")
         self.Mots155 = mots("allez, prends ça !","Finish")
         self.Mots156 = mots("dans ta face !","Finish")
@@ -166,6 +174,7 @@ class liste_mots:
         self.Mots164 = mots("ni plus, ni moins !","Finish")
         self.Mots165 = mots("de toute façon cause toujours ça m\'atteint pas.","Finish")
 
+        # Mots en rapport avec la map Train
         self.Mots175 = mots("à l\'interieur du wagon","Train")
         self.Mots176 = mots("dans ce train","Train")
         self.Mots177 = mots("avec ton billet","Train")
@@ -174,6 +183,7 @@ class liste_mots:
         self.Mots180 = mots("déclassé","Train")
         self.Mots181 = mots("dans la classe éco","Train")
 
+        # Mots en rapport avec la map Plage
         self.Mots186 = mots("sable","Plage")
         self.Mots187 = mots("à la mer","Plage")
         self.Mots188 = mots("parasol","Plage")
@@ -182,6 +192,7 @@ class liste_mots:
         self.Mots191 = mots("un coup de soleil","Plage")
         self.Mots192 = mots("chateau de sable","Plage")
 
+        # Mots en rapport avec la map Bureau
         self.Mots197 = mots("ordinateur","Bureau")
         self.Mots198 = mots("à la cafétériat","Bureau")
         self.Mots199 = mots("à l\'accueil","Bureau")
@@ -191,6 +202,7 @@ class liste_mots:
         self.Mots203 = mots("bientôt au chômage","Bureau")
         self.Mots204 = mots("licensié","Bureau")
 
+        # Mots en rapport avec la map Piscine
         self.Mots208 = mots("dans le pédiluve","Piscine")
         self.Mots209 = mots("dans les vestiaires","Piscine")
         self.Mots210 = mots("l\'étoile de mer","Piscine")
@@ -200,6 +212,7 @@ class liste_mots:
         self.Mots214 = mots("boies la tasse","Piscine")
         self.Mots215 = mots("pouille mouillé","Piscine")
         
+        # Mots en rapport avec la map Magasin
         self.Mots219 = mots("devant les portes automatiques","Magasin")
         self.Mots220 = mots("dans ton cadis","Magasin")
         self.Mots221 = mots("périmé","Magasin")
@@ -208,6 +221,7 @@ class liste_mots:
         self.Mots224 = mots("dans les rayons","Magasin")
         self.Mots225 = mots("à la caisse","Magasin")
 
+        # Mots en rapport avec le personnage Chauve
         self.Mots226 = mots("crâne d\'oeuf !","Chauve") 
         self.Mots227 = mots("petite boule de billard","Chauve") 
         self.Mots228 = mots("sale chauve","Chauve") 
@@ -220,6 +234,7 @@ class liste_mots:
         #self.Mots235 = mots("","Chauve")   
         #self.Mots236 = mots("","Chauve") 
 
+        # Mots en rapport avec le personnage Roux
         self.Mots237 = mots("rouquin","Roux")
         self.Mots238 = mots("poil de carotte","Roux")
         self.Mots239 = mots("roux","Roux")
@@ -232,6 +247,7 @@ class liste_mots:
         #self.Mots246 = mots("","Roux")
         #self.Mots247 = mots("","Roux")
 
+        # Mots en rapport avec le personnage Nain
         self.Mots248 = mots("mon petit pote","Nain")
         self.Mots249 = mots("petit","Nain")
         self.Mots250 = mots("minus !","Nain")
@@ -244,6 +260,7 @@ class liste_mots:
         #self.Mots257 = mots("","Nain")
         #self.Mots258 = mots("","Nain")
 
+        # Mots en rapport avec le personnage Vieille
         self.Mots259 = mots("vieille peau","Vieille")
         self.Mots260 = mots("la vioque","Vieille")
         self.Mots261 = mots("la centenaire","Vieille")
@@ -255,7 +272,8 @@ class liste_mots:
         #self.Mots267 = mots("","Vieille")
         #self.Mots268 = mots("","Vieille")
         #self.Mots269 = mots("","Vieille")
-    # mes autres variables
+
+    # Mes autres variables
         self.choix_map = choix_map
         self.choix_perso1 = choix_perso1
         self.choix_perso2 = choix_perso2
@@ -289,7 +307,8 @@ class liste_mots:
             return x
 
     def mots_basiques(self):
-        x = (random.choices(self.list_sujet, k=4) + random.choices(self.list_verbe, k=4) + random.choices(self.list_adverbe, k=3) + random.choices(self.list_adjectif, k=3)) + random.choices(self.list_finish, k=3) 
+        # 4 mots tirés dans liste sujet + 4 mots tirés dans la liste verbe + 3 mots tirés dans la liste adverbe + 3 mots tirés dans la liste adjectif + 3 mots tirés dans la liste finish
+        x = (random.choices(self.list_sujet, k=4) + random.choices(self.list_verbe, k=4) + random.choices(self.list_adverbe, k=3) + random.choices(self.list_adjectif, k=3)) + random.choices(self.list_finish, k=3)
         return x
 
     def mots_perso(self,choix_perso):
