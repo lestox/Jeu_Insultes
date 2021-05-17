@@ -64,13 +64,14 @@ class game:
                 self.maList = liste_mots(self.choix_map,self.choix_perso1,self.choix_perso2).prepare_list()
                 self.Combat(self.map,self.perso1,self.perso2,self.maList)
             # Tour du Joueur 1
-            print("\n ------------------------------ Tour du joueur 1 ------------------------------ \n")
+            print("\n\n\n\n\n ------------------------------ Tour du joueur 1 ------------------------------ \n\n\n\n\n")
             self.PlayerTurn(perso1,perso2,maList,0)
             # Tour du Joueur 2
-            print("\n ------------------------------ Tour du joueur 2 ------------------------------ \n")
+            print("\n\n\n\n\n ------------------------------ Tour du joueur 2 ------------------------------ \n\n\n\n\n")
             self.PlayerTurn(perso2,perso1,maList,self.choix_mode)
             print("\n ---------- La phrase du perso1 : ---------- ",end=" "),self.Print_phrase(perso1.phrase_insulte)
             print("\n ---------- La phrase du perso2 : ---------- ",end=" "),self.Print_phrase(perso2.phrase_insulte)
+        print("Victory")
         
         
 
@@ -112,26 +113,25 @@ class game:
         phrase = perso.phrase_insulte
         # 2) Faire le calcul du niveau de degat
         Niveau_Degat = self.Calcul_Atk(phrase,persoAdverse)
-        print("Efficacité d'attaque de niveau",Niveau_Degat)
         # 3) Appeler perso.damage pour retirer les pv
         self.Atk(persoAdverse,Niveau_Degat)
         
     def Atk(self,persoAdverse,Niveau_Degat):
         if Niveau_Degat == 7: 
+            print("L'adversaire perd 100 PV")
+            persoAdverse.damage(100)
+        elif Niveau_Degat == 6:
             print("L'adversaire perd 75 PV")
             persoAdverse.damage(75)
-        elif Niveau_Degat == 6:
+        elif Niveau_Degat == 5:
             print("L'adversaire perd 50 PV")
             persoAdverse.damage(50)
-        elif Niveau_Degat == 5:
+        elif Niveau_Degat == 4:
+            print("L'adversaire perd 35 PV")
+            persoAdverse.damage(35)
+        elif Niveau_Degat == 3:
             print("L'adversaire perd 25 PV")
             persoAdverse.damage(25)
-        elif Niveau_Degat == 4:
-            print("L'adversaire perd 20 PV")
-            persoAdverse.damage(20)
-        elif Niveau_Degat == 3:
-            print("L'adversaire perd 10 PV")
-            persoAdverse.damage(10)
         elif Niveau_Degat == 2 or Niveau_Degat == 1:
             print("L'adversaire perd 5 PV")
             persoAdverse.damage(5)
@@ -157,7 +157,7 @@ class game:
                     if phrase[indice+2].type == "Adverbe" and phrase[indice+1].type == "Verbe":
                         Niveau_Degat += 1
                     if len(phrase) > 3:
-                        if phrase[indice+3].type == "Adjectif" and phrase[indice+4].type == "Adverbe":
+                        if phrase[indice+3].type == "Adjectif" and phrase[indice+2].type == "Adverbe":
                             Niveau_Degat += 1
             for Mots in phrase:
                 if Mots.type == "Chauve" and persoAdverse.style == "Chauve":
