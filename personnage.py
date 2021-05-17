@@ -34,7 +34,7 @@ class personnage:
 
         elif choix_mode == 1 or 2: # Joueur 2 si IA
             time.sleep(1)
-            print("\nSelection du mot de l'IA :\n")
+            print("\nL'IA choisis son mot :\n")
             time.sleep(3)
             choix = random.randint(1,len(maList)) - 1
             mots = maList[choix]

@@ -94,7 +94,8 @@ class game:
 
     def PlayerTurn(self,perso,persoAdverse,maList,choix_mode):
         if choix_mode == 0: # tour du joueur 1 / Et du joueur 2 si le mode est [J vs J]
-            print("1/Ajouter des mots 2/Envoyer la phrase")
+            print("1/Ajouter des mots")
+            print("2/Envoyer la phrase")
             choix = int(input())
             if choix == 1: # Ajouter des mots
                 self.Print_mots(maList)
@@ -109,7 +110,7 @@ class game:
 
         elif choix_mode == 1 or 2: # tour du joueur 2 si le mode est [J vs IA] ou [Démo]
             time.sleep(1) # les time.sleep ont pour but de simuler la réflexion du bot
-            print("\nSelection de l'IA (1/Ajouter des mots 2/Envoyer la phrase):\n")
+            print("\nL'IA choisit entre 1/Ajouter des mots et 2/Envoyer la phrase :\n")
             time.sleep(3)
             choix = random.randint(1,2)
             if choix == 1: # Ajouter des mots
@@ -215,8 +216,11 @@ class game:
     def Print_mots(self,liste):
     # Affiche les mots d'une liste verticalement
         print("")
+        i=1
         for Mots in liste:
-            print(Mots.text)
+            print(i, end='/')
+            print("", Mots.text)
+            i+=1
         print("")
 
 
@@ -260,23 +264,23 @@ class game:
     def demo(self):
     # Le tutoriel qui est affiché si le joueur sélectionne le mode Démo
         print("Voici un petit tutoriel pour t'expliquer comment jouer.\n")
-        time.sleep(3)
+        time.sleep(2)
         print("Choisis ton mode de jeu en tapant le chiffre correspondant à ce que tu veux choisir, cela sera comme ça tout le long du jeu.")
-        time.sleep(3)
+        time.sleep(2)
         print("Tu devras ensuite choisir ton pesonnage, chaque personnages est caractéristique et possède ses propres faiblesses.\n")
-        time.sleep(3)
+        time.sleep(2)
         print("Tu devras ensuite choisir le lieu où aura lieu le clash.")
-        time.sleep(2)
+        time.sleep(1)
         print("Esuite, le jeu commence ! Le but du jeu va être de battre son adversaire à coup d'insultes.\n")
-        time.sleep(2)
+        time.sleep(1)
         print("Pour ce faire, une liste de mots commune aux 2 joueurs sera proposée, les joueurs devront choisir des mots chacun à leur tour pour formuler leur phrase d'insulte\n")
-        time.sleep(3)
+        time.sleep(2)
         print("Ton clash est plus puissant si tu fais des phrases cohérentes, si tu touches aux points sensibles de ton adversaire ou si tu utilises des mots en rapport avec la map que tu as choisi.\n")
-        time.sleep(3)
+        time.sleep(2)
         print("A chaque début de tour il t'est proposé d'ajouter des mots ou d'envoyer ta phrase, ainsi lorsque tu juges que ton insulte est finie, tu peux l'envoyer en choisissant envoyer l'insulte.\n")
-        time.sleep(4)
+        time.sleep(3)
         print("Ainsi, à tout moment toi ou ton adversaire peut décider de finir sa phrase\n")
-        time.sleep(2)
+        time.sleep(1)
         print("Le premier qui n'a plus de points de vie perd la partie")
-        time.sleep(2)
+        time.sleep(1)
         print("Bon jeu !")
