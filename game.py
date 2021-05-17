@@ -75,11 +75,14 @@ class game:
         
         # Lorsqu'au moins un joueur a perdu ses PV, on déclare le vainqueur ou l'égalité
         if perso1.pv > 0:
-            print("------------------------------ VICTOIRE DU ",perso1.style," ! ------------------------------")
+            print("\n\n\n\n\n------------------------------ VICTOIRE DU ",perso1.style," ! ------------------------------\n\n\n\n\n")
+            game()
         elif perso2.pv > 0:
-            print("------------------------------ VICTOIRE DU ",perso2.style," ! ------------------------------")
+            print("\n\n\n\n\n------------------------------ VICTOIRE DU ",perso2.style," ! ------------------------------\n\n\n\n\n")
+            game()
         else: 
-            print("------------------------------ EGALITE ! ------------------------------")
+            print("\n\n\n\n\n------------------------------ EGALITE ! ------------------------------\n\n\n\n\n")
+            game()
         
         
 
@@ -188,6 +191,9 @@ class game:
                     Niveau_Degat += 1
                     break
                 if Mots.type == "Bureau" and self.map.styleMap == "Bureau":
+                    Niveau_Degat += 1
+                    break
+                if Mots.type == "Piscine" and self.map.styleMap == "Piscine":
                     Niveau_Degat += 1
                     break
                 if Mots.type == "Magasin" and self.map.styleMap == "Magasin":
