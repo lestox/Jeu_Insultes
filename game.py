@@ -62,15 +62,15 @@ class game:
         self.PlayerTurn(perso1,maList,0)
         print("\nAu tour du joueur 2\n")
         self.PlayerTurn(perso2,maList,self.choix_mode)
-        print("\n La phrase du perso1",perso1.phrase_insulte)
-        print("\n La phrase du perso2",perso2.phrase_insulte,"\n")
+        print("\n La phrase du perso 1",perso1.phrase_insulte)
+        print("\n La phrase du perso 2",perso2.phrase_insulte,"\n")
         
 
 
     def PlayerTurn(self,perso,maList,choix_mode):
         if choix_mode == 0: # tour du joueur 1 / Et du joueur 2 si le mode est [J vs J]
-            print("1/Ajouter des mots")
-            print("2/Envoyer la phrase")
+            print("1/Ajouter des mots à la phrase")
+            print("2/Ma phrase est finie !")
             choix = int(input())
             if choix == 1:
                 self.choix_insulte = perso.Ajout_mots(maList,0)
