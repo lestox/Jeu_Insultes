@@ -1,4 +1,4 @@
-# TO DO : Notre class pour les attaques, qui va calculer si la phrase est un bon clash ou pas.
+# Nous n'avons finalement pas intégré de classe attaque, mais voici la réflexion de l'algo syntaxique pour y voir + clair
 
 # Les possibilités d'une attaque sont par exemples : 
     # I - Nulle (si atk entre 0 et 1) => 0% degat
@@ -20,6 +20,4 @@
         # Prend ça !(+1 point) Niveau d'efficacité de V
             # 5 points + 2 points BONUS =>  VII, donc KO en 1 coup
 # Ensuite : Round suivant
-
-
 # Puis, dans le game.py ça va appeler "personnage.damage(atk)" pour retirer les points de vie
