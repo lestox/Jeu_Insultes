@@ -60,18 +60,26 @@ class game:
         # Tant qu'un des joueurs n'est pas mort
         while perso1.pv > 0 and perso2.pv > 0:
             if len(maList) <= 1: # Si la list est vide ou quasi vide, on la reremplit 
-                print("jesuisdansleif")
                 self.maList = liste_mots(self.choix_map,self.choix_perso1,self.choix_perso2).prepare_list()
                 self.Combat(self.map,self.perso1,self.perso2,self.maList)
-            # Tour du Joueur 1
+        # Tour du Joueur 1
             print("\n\n\n\n\n ------------------------------ Tour du joueur 1 ------------------------------ \n\n\n\n\n")
             self.PlayerTurn(perso1,perso2,maList,0)
-            # Tour du Joueur 2
+        # Tour du Joueur 2
             print("\n\n\n\n\n ------------------------------ Tour du joueur 2 ------------------------------ \n\n\n\n\n")
             self.PlayerTurn(perso2,perso1,maList,self.choix_mode)
-            print("\n ---------- La phrase du perso1 : ---------- ",end=" "),self.Print_phrase(perso1.phrase_insulte)
-            print("\n ---------- La phrase du perso2 : ---------- ",end=" "),self.Print_phrase(perso2.phrase_insulte)
-        print("Victory")
+            print("\n ---------- La phrase du "+perso1.style+" : ---------- ",end=" "),self.Print_phrase(perso1.phrase_insulte)
+            print("\n ---------- La phrase du "+perso2.style+" : ---------- ",end=" "),self.Print_phrase(perso2.phrase_insulte)
+            print("\nPoints de vie du "+perso1.style+" :",perso1.pv,"/ 100")
+            print("\nPoints de vie du "+perso2.style+" :",perso2.pv,"/ 100")
+        
+        # Lorsqu'au moins un joueur a perdu ses PV, on déclare le vainqueur ou l'égalité
+        if perso1.pv > 0:
+            print("------------------------------ VICTOIRE DU ",perso1.style," ! ------------------------------")
+        elif perso2.pv > 0:
+            print("------------------------------ VICTOIRE DU ",perso2.style," ! ------------------------------")
+        else: 
+            print("------------------------------ EGALITE ! ------------------------------")
         
         
 
@@ -118,25 +126,25 @@ class game:
         
     def Atk(self,persoAdverse,Niveau_Degat):
         if Niveau_Degat == 7: 
-            print("L'adversaire perd 100 PV")
+            print("Le "+persoAdverse.style+" perd 100 PV")
             persoAdverse.damage(100)
         elif Niveau_Degat == 6:
-            print("L'adversaire perd 75 PV")
+            print("Le "+persoAdverse.style+" perd 75 PV")
             persoAdverse.damage(75)
         elif Niveau_Degat == 5:
-            print("L'adversaire perd 50 PV")
+            print("Le "+persoAdverse.style+" perd 50 PV")
             persoAdverse.damage(50)
         elif Niveau_Degat == 4:
-            print("L'adversaire perd 35 PV")
+            print("Le "+persoAdverse.style+" perd 35 PV")
             persoAdverse.damage(35)
         elif Niveau_Degat == 3:
-            print("L'adversaire perd 25 PV")
+            print("Le "+persoAdverse.style+" perd 25 PV")
             persoAdverse.damage(25)
         elif Niveau_Degat == 2 or Niveau_Degat == 1:
-            print("L'adversaire perd 5 PV")
+            print("Le "+persoAdverse.style+" perd 5 PV")
             persoAdverse.damage(5)
         elif Niveau_Degat == 0:
-            print("L'adversaire perd 0 PV")
+            print("Le "+persoAdverse.style+" perd 0 PV")
             persoAdverse.damage(0)
 
 
@@ -186,7 +194,7 @@ class game:
                     Niveau_Degat += 1
                     break
         else:
-            print("Erreur, votre phrase doit au moins contenir 1 mot")
+            print("Cela n'est pas efficace, votre phrase doit au moins contenir 1 mot")
         return Niveau_Degat
 
 # Affiche les mots d'une liste verticalement
