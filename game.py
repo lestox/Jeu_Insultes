@@ -216,8 +216,11 @@ class game:
     def Print_mots(self,liste):
     # Affiche les mots d'une liste verticalement
         print("")
+        i=1
         for Mots in liste:
-            print(Mots.text)
+            print(i, end='/')
+            print("", Mots.text)
+            i+=1
         print("")
 
 

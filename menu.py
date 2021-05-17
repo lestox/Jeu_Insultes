@@ -8,7 +8,7 @@ class menu:
 
     def __init__(self):
     # Nos listes de paramètres à choisir afin de préparer la partie
-        self.list_mode = ["1/Joueur VS Joueur","2/Joueur VS IA","3/DEMO"]
+        self.list_mode = ["1/Joueur VS Joueur","2/Joueur VS IA","3/Règles du jeu"]
         self.list_perso = ["1/Le Chauve","2/Le Roux", "3/Le Nain","4/La Vieille"]
         self.list_map = ["1/Le Train","2/La Plage", "3/Le Bureau", "4/La Piscine","5/Le Magasin"]
     
