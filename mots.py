@@ -4,9 +4,4 @@ class mots:
     def __init__(self,text,type):
         self.text = text 
         self.type = type
-    
-# monMot1 = mots("Tu","Sujet")
-# print(monMot1)
-
-# monMot2 = mots("très moche","Adjectif")
-# print(monMot2)
+        
